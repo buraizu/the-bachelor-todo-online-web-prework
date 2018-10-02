@@ -39,14 +39,8 @@ end
 def get_occupation(data, hometown)
   data.each do |season, contestant|
     contestant.each do |element|
-      element.each do |key, value|
-        if value == hometown
-          element.each do |key2, value2|
-            if key2 == :occupation
-            return value2
-            end
-          end
-        end
+      if element["hometown"] == hometown
+        return element["occupation"]
       end
     end
   end
