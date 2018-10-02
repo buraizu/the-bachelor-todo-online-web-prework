@@ -1,10 +1,10 @@
 require 'pry'
 def get_first_name_of_season_winner(data, season)
   full_name =
-  data.each do |number, info|
-    if number == season
-      if info[0]["status"] == "Winner"
-        full_name = info[0]["name"]
+  data.each do |seazon, contestant|
+    if seazon == season
+      if contestant[0]["status"] == "Winner"
+        full_name = contestant[0]["name"]
         first_name = full_name.split
         return first_name[0]
       end
