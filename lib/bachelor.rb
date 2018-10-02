@@ -26,19 +26,19 @@ def count_contestants_by_hometown(data, hometown)
   hometown_counter
 end
 
-# def get_occupation(data, hometown)
-#   data.each do |season, contestant|
-#     contestant.each do |element|
-#       element.each do |key, value|
-#         if value == hometown
-#           element.each do |key2, value2|
-#             if key2 == :occupation
-#             return value2
-#             end
-#           end
-#         end
-#       end
-#     end
-#   end
-# end
+def get_occupation(data, hometown)
+  data.each do |season, contestant|
+    contestant.each do |element|
+      element.each do |key, value|
+        if value == hometown
+          element.each do |key2, value2|
+            if key2 == :occupation
+            return value2
+            end
+          end
+        end
+      end
+    end
+  end
+end
 
